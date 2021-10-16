@@ -1,0 +1,40 @@
+2021-10-15T16:49:06+00:00 CRITICAL Uncaught Error: Class 'MailPoet\Config\Installer' not found in C:\xampp\htdocs\Aristino\wp-content\plugins\mailpoet\lib\Config\Initializer.php:262
+Stack trace:
+#0 C:\xampp\htdocs\Aristino\wp-content\plugins\mailpoet\lib\Config\Initializer.php(218): MailPoet\Config\Initializer->setupInstaller()
+#1 C:\xampp\htdocs\Aristino\wp-includes\class-wp-hook.php(303): MailPoet\Config\Initializer->initialize('')
+#2 C:\xampp\htdocs\Aristino\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\Aristino\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\Aristino\wp-settings.php(578): do_action('init')
+#5 C:\xampp\htdocs\Aristino\wp-config.php(90): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Aristino\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Aristino\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\Aristino\index.php(17): require('C:\\xampp\\htdocs...')
+#9 {main}
+  thrown in C:\xampp\htdocs\Aristino\wp-content\plugins\mailpoet\lib\Config\Initializer.php on line 262
+
+2021-10-15T16:49:06+00:00 CRITICAL Uncaught Error: Class 'MailPoet\Config\Installer' not found in C:\xampp\htdocs\Aristino\wp-content\plugins\mailpoet\lib\Config\Initializer.php:262
+Stack trace:
+#0 C:\xampp\htdocs\Aristino\wp-content\plugins\mailpoet\lib\Config\Initializer.php(218): MailPoet\Config\Initializer->setupInstaller()
+#1 C:\xampp\htdocs\Aristino\wp-includes\class-wp-hook.php(303): MailPoet\Config\Initializer->initialize('')
+#2 C:\xampp\htdocs\Aristino\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\Aristino\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\Aristino\wp-settings.php(578): do_action('init')
+#5 C:\xampp\htdocs\Aristino\wp-config.php(90): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Aristino\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Aristino\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\Aristino\index.php(17): require('C:\\xampp\\htdocs...')
+#9 {main}
+  thrown in C:\xampp\htdocs\Aristino\wp-content\plugins\mailpoet\lib\Config\Initializer.php on line 262
+
+2021-10-15T16:53:08+00:00 CRITICAL Uncaught Error: Call to undefined function twentytwenty_the_theme_svg() in C:\xampp\htdocs\Aristino\wp-content\themes\vitimex\header.php:51
+Stack trace:
+#0 C:\xampp\htdocs\Aristino\wp-includes\template.php(770): require_once()
+#1 C:\xampp\htdocs\Aristino\wp-includes\template.php(716): load_template('C:\\xampp\\htdocs...', true, Array)
+#2 C:\xampp\htdocs\Aristino\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\xampp\htdocs\Aristino\wp-content\themes\vitimex\index.php(17): get_header()
+#4 C:\xampp\htdocs\Aristino\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\Aristino\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Aristino\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\Aristino\wp-content\themes\vitimex\header.php on line 51
+
