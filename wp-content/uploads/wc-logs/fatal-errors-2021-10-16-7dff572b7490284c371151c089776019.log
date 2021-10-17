@@ -1,0 +1,16 @@
+2021-10-16T15:34:38+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Term as array in C:\xampp\htdocs\Aristino\wp-content\themes\vitimex\archive.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Aristino\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\Aristino\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aristino\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\Aristino\wp-content\themes\vitimex\archive.php on line 5
+
+2021-10-16T15:34:40+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Term as array in C:\xampp\htdocs\Aristino\wp-content\themes\vitimex\archive.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Aristino\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\Aristino\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aristino\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\Aristino\wp-content\themes\vitimex\archive.php on line 5
+

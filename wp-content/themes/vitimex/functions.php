@@ -216,3 +216,53 @@ function add_menu_parent_class($items)
 
 //add_menu_parent_class to menu
 add_filter('wp_nav_menu_objects', 'add_menu_parent_class');
+
+if (!function_exists('glw_custom_pagination')) {
+	function glw_custom_pagination(WP_Query $wp_query = null, $echo = true)
+	{
+		if ($wp_query === null) {
+			global $wp_query;
+		}
+		$pages = paginate_links(
+			array(
+				'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
+				'format'       => '?paged=%#%',
+				'current'      => max(1, get_query_var('paged')),
+				'total'        => $wp_query->max_num_pages,
+				'type'         => 'array',
+				'show_all'     => false,
+				'end_size'     => 2,
+				'mid_size'     => 1,
+				'prev_next'    => true,
+				'prev_text'    => '<i class="fa fa-angle-double-left"></i> Trang đầu',
+				'next_text'    => 'Trang sau <i class="fa fa-angle-double-right"></i>',
+				'add_args'     => false,
+				'add_fragment' => ''
+			)
+		);
+
+		if (is_array($pages)) {
+			$pagination = '<ul class="page pageA pageA06">';
+			foreach ($pages as $page) {
+				$pagination .= '<li' . (strpos($page, 'current') !== false ? ' class="current" ' : '') . '>';
+				if (strpos($page, 'current') !== false) {
+					if (get_query_var('paged') > 1) {
+						$pagination .= '<a ' . (strpos($page, 'current') !== false ? ' class="current" ' : '') . '>' . get_query_var('paged') . '</a>';
+					} else {
+						$pagination .= '<a' . (strpos($page, 'current') !== false ? ' class="current" ' : '') . '>' . 1 . '</a>';
+					}
+				} else {
+					$pagination .= str_replace('class="page-numbers"', '', $page);
+				}
+				$pagination .= '</li>';
+			}
+			$pagination .= '</ul>';
+			if ($echo === true) {
+				echo $pagination;
+			} else {
+				return $pagination;
+			}
+		}
+		return null;
+	}
+}

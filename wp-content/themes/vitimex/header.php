@@ -9423,20 +9423,26 @@
                     location.href = url;
                 }
             </script>
-            <script type="text/javascript">
-                $(function() {
-                    $(window).scroll(function() {
-                        if ($(this).scrollTop() > 50) {
-                            $('.wp-main-menu').addClass('menu-fix animated');
-                        } else {
-                            $('.wp-main-menu').removeClass('menu-fix animated');
-                        }
+            <?php
+            if (is_home() || is_front_page()) :
+            ?>
+                <script type="text/javascript">
+                    $(function() {
+                        $(window).scroll(function() {
+                            if ($(this).scrollTop() > 50) {
+                                $('.wp-main-menu').addClass('menu-fix animated');
+                            } else {
+                                $('.wp-main-menu').removeClass('menu-fix animated');
+                            }
+                        });
                     });
-                });
-            </script>
+                </script>
+            <?php
+            endif;
+            ?>
             <input type="hidden" id="ReturnPath" value="%2f" />
             <div class="loading"><i class="icon">Loading</i></div>
-            <div class="wp-main-menu ">
+            <div class="wp-main-menu <?php echo (!is_home() || !is_front_page()) ? "menu-fix animated" : ""; ?> ">
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="navbar-collapse">
                         <?php
